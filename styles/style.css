@@ -1,3 +1,113 @@
+:root {
+  --primary-500: hsl(158, 36%, 37%);
+  --primary-700: hsl(158, 42%, 18%);
+  --neutral-000: hsl(0, 0%, 100%);
+  --neutral-500: hsl(30, 38%, 92%);
+  --neutral-600: hsl(228, 12%, 48%);
+  --neutral-700: hsl(212, 21%, 14%);
+}
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--neutral-500);
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+.card {
+  background-color: var(--neutral-000);
+  color: var(--neutral-600);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  max-width: 60rem;
+  line-height: 1.7;
+  border-radius: 2rem;
+}
+.card__img-container {
+  width: 50%;
+}
+.card__img {
+  border-radius: 2rem 0 0 2rem;
+  height: 100%;
+  object-fit: cover;
+}
+@media screen and (max-width: 37.5em) {
+  .card__img-container {
+    width: 100%;
+  }
+  .card__img {
+    border-radius: 2rem 2rem 0 0;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.card__content {
+  width: 50%;
+  font-size: 2.5rem;
+  padding: 2rem;
+}
+@media screen and (max-width: 37.5em) {
+  .card__content {
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 2rem;
+  }
+}
+.card__name {
+  color: var(--neutral-700);
+  font-family: "Fraunces", sans-serif;
+  line-height: 1;
+}
+@media screen and (max-width: 41.875em) {
+  .card {
+    max-width: 55rem;
+  }
+}
+@media screen and (max-width: 37.5em) {
+  .card {
+    flex-direction: column;
+    max-width: 30rem;
+    padding: 1rem;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.centered {
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
 
 /*# sourceMappingURL=style.css.map */

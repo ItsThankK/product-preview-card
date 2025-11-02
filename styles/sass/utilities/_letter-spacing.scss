@@ -1,0 +1,7 @@
+.letter-spacing {
+  letter-spacing: .55rem;
+  
+  @media screen and (max-width: 37.5em) {
+    letter-spacing: .3rem;
+  }
+}

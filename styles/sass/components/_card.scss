@@ -8,7 +8,7 @@
   max-width: 60rem;
   line-height: 1.7;
   border-radius: $card-border-radius-desktop;
-
+  
   &__img {
     &-container {
       width: 50%;
@@ -16,35 +16,52 @@
     border-radius: $card-border-radius-desktop 0 0 $card-border-radius-desktop;
     height: 100%;
     object-fit: cover;
-
+    
     @media screen and (max-width: 37.5em) {
       &-container {
         width: 100%;
       }
-      border-radius: $card-border-radius-desktop $card-border-radius-desktop 0 0;
-      height: 100%;
+      border-radius: $card-border-radius-mobile $card-border-radius-mobile 0 0;
       object-fit: cover;
     }
   }
-
+  
   &__content {
     width: 50%;
     font-size: 2.5rem;
     padding: $card-padding-desktop;
-
+    
     @media screen and (max-width: 37.5em) {
       width: 100%;
       font-size: 1.5rem;
-      padding: $card-padding-desktop;
+      padding: $card-padding-mobile;
     }
   }
-
+  
   &__name {
     color: var(--neutral-700);
     font-family: $font-family-accent;
     line-height: 1;
-  }
 
+    @media screen and (max-width: 37.5em) {
+      font-size: 3rem;
+    }
+  }
+  
+  &__pricing {
+    p {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .discount {
+      font-family: $font-family-accent;
+      font-weight: $font-weight-bold;
+      font-size: 3rem;
+      color: var(--primary-500);
+    }
+  }
+  
   @media screen and (max-width: 41.875em) {
     max-width: 55rem;
   }
@@ -52,6 +69,5 @@
   @media screen and (max-width: 37.5em) {
     flex-direction: column;
     max-width: 30rem;
-    padding: $card-padding-mobile;
   }
 }
